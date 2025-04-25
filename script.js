@@ -11,28 +11,23 @@ const dataKelompok = {
 
 function tampilkanKelompok() {
   const namaInput = document.getElementById("nama");
-  const nama = namaInput.value.trim();
-  
-  // Cek apakah input kosong
+  const nama = namaInput.value.trim().toLowerCase();
+
   if (nama === "") {
     alert("Tolong masukkan namamu dulu ya!");
     return;
   }
 
-  // Ubah input menjadi lowercase untuk pencocokan data
-  const namaLower = nama.toLowerCase();
+  const hasilElement = document.getElementById("hasil");
 
-  // Cek apakah nama ada dalam dataKelompok
-  if (dataKelompok[namaLower]) {
-    // Tampilkan nama dengan huruf kapital pertama
-    const tampilNama = nama.charAt(0).toUpperCase() + nama.slice(1).toLowerCase();
-    document.getElementById("hasil").innerText = 
-      `Hai ${tampilNama}, kamu kelompok ${dataKelompok[namaLower]}!\n\nHAVE FUNN YAAA..\nGOD BLESS 🔥✨`;
+  if (dataKelompok[nama]) {
+    const tampilNama = nama.charAt(0).toUpperCase() + nama.slice(1);
+    hasilElement.innerText = `Hai ${tampilNama}, kamu kelompok ${dataKelompok[nama]}!\n\nHAVE FUNN YAAA..\nGOD BLESS 🔥✨`;
+    hasilElement.style.display = "block"; // Menampilkan hasil
   } else {
-    document.getElementById("hasil").innerText = 
-      `Maaf ${nama}, kamu belum terdaftar di kelompok manapun.`;
+    hasilElement.innerText = `Maaf ${nama}, kamu belum terdaftar di kelompok manapun.`;
+    hasilElement.style.display = "block"; // Menampilkan hasil
   }
 
-  // Reset input setelah pengecekan
-  namaInput.value = "";
+  namaInput.value = ""; // Kosongkan input setelah submit
 }
