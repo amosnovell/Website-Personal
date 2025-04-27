@@ -48,6 +48,7 @@ function tampilkanKelompok() {
     // Jika nama tidak ditemukan dalam dataKelompok
     hasilElement.innerText = `Maaf ${nama}, kamu belum terdaftar di kelompok manapun.`;
     hasilElement.style.display = "block"; // Menampilkan hasil
+    hasilElement.style.animation = "fadeIn 0.8s ease forwards";
   }
 
   // Kosongkan input setelah submit
