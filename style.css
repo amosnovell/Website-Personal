@@ -1,80 +1,80 @@
-/* Menggunakan font Poppins untuk konsistensi */
+/* style.css */
+
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f); /* Gradasi warna cerah */
-  color: #333;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  min-height: 100vh;
   margin: 0;
 }
 
 h1 {
-  font-size: 3.5rem;
-  color: #ff6f61;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
 }
 
 .find-team {
-  font-size: 1.5rem;
-  color: #ff5722;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #555;
 }
 
 .sub {
-  font-size: 1.2rem;
-  color: #ff5722;
-  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #444;
 }
 
-input {
-  padding: 12px;
-  font-size: 1.2rem;
-  border: 2px solid #ff6f61;
+input[type="text"] {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
   border-radius: 10px;
-  margin-bottom: 15px;
-  width: 80%;
-  max-width: 400px;
+  width: 250px;
+  margin-bottom: 20px;
 }
 
 button {
-  padding: 12px 24px;
-  font-size: 1.2rem;
-  background-color: #ff6f61;
+  display: block;
+  margin: 10px auto 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
   color: white;
+  background-color: #ff7e5f;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
-  width: 80%;
-  max-width: 400px;
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #ff5722;
+  background-color: #eb5e28;
 }
 
 .result {
-  font-size: 1.5rem;
-  background: #fff4e6;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  display: none; /* Mulai dengan menyembunyikan hasil */
+  display: none;
   margin-top: 20px;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  background-color: #fff8f0;
+  border-radius: 15px;
+  width: fit-content;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
 }
 
-@media (max-width: 576px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  .find-team {
-    font-size: 1.2rem;
-  }
-  .sub {
-    font-size: 1rem;
-  }
-  input, button {
-    width: 90%;
+/* Animasi fade in */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
   }
 }
