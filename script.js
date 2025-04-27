@@ -1,3 +1,5 @@
+// script.js
+
 const dataKelompok = {
   "amos": 1,
   "devin": 1,
@@ -28,29 +30,23 @@ const dataKelompok = {
 function tampilkanKelompok() {
   const namaInput = document.getElementById("nama");
   const nama = namaInput.value.trim().toLowerCase();
+  const hasilElement = document.getElementById("hasil");
 
-  // Validasi jika input nama kosong
   if (nama === "") {
     alert("Tolong masukkan namamu dulu ya!");
     return;
   }
 
-  // Ambil elemen untuk menampilkan hasil
-  const hasilElement = document.getElementById("hasil");
-
-  // Periksa apakah nama ada dalam dataKelompok
   if (dataKelompok[nama]) {
-    // Memformat nama agar dimulai dengan huruf kapital
     const tampilNama = nama.charAt(0).toUpperCase() + nama.slice(1);
-    hasilElement.innerText = `Hai ${tampilNama}, kamu kelompok ${dataKelompok[nama]}!\n\nHAVE FUNN YAAA..\nGOD BLESS 🔥✨`;
-    hasilElement.style.display = "block"; // Menampilkan hasil
+    hasilElement.innerHTML = `Hai ${tampilNama}, kamu kelompok ${dataKelompok[nama]}!<br><br>HAVE FUNN YAAA..<br>GOD BLESS 🔥✨`;
   } else {
-    // Jika nama tidak ditemukan dalam dataKelompok
-    hasilElement.innerText = `Maaf ${nama}, kamu belum terdaftar di kelompok manapun.`;
-    hasilElement.style.display = "block"; // Menampilkan hasil
-    hasilElement.style.animation = "fadeIn 0.8s ease forwards";
+    const tampilNama = nama.charAt(0).toUpperCase() + nama.slice(1);
+    hasilElement.innerHTML = `Maaf ${tampilNama}, kamu belum terdaftar di kelompok manapun.`;
   }
 
-  // Kosongkan input setelah submit
+  hasilElement.style.display = "block";
+  hasilElement.style.animation = "fadeIn 0.8s ease forwards";
+
   namaInput.value = "";
 }
