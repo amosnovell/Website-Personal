@@ -15,7 +15,7 @@ const dataKelompok = {
   "joanna": 2,
   "octa": 2,
   "gween": 2,
-  "selly": 2,
+  "rista": 2,
   "windi": 2,
   "toji": 3,
   "kalvari": 3,
@@ -25,6 +25,7 @@ const dataKelompok = {
   "sunita": 3,
   "dwi": 3,
   "deva": 3,
+  "yoseph": 3,
 };
 
 function tampilkanKelompok() {
