@@ -6,7 +6,7 @@ const dataKelompok = {
   "zed": 1,
   "owen": 1,
   "naomi": 1,
-  "wita": 1,
+  "wita": 3,
   "gaby": 1,
   "rachel": 1,
   "michael": 2,
@@ -24,7 +24,7 @@ const dataKelompok = {
   "lolieta": 3,
   "sunita": 3,
   "dwi": 3,
-  "deva": 3,
+  "deva": 1,
   "yoseph": 3,
 };
 
