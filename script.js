@@ -16,7 +16,7 @@ const dataKelompok = {
   "octa": 2,
   "gween": 2,
   "rista": 2,
-  "windi": 2,
+  "winda": 2,
   "selly": 2,
   "toji": 3,
   "kalvari": 3,
